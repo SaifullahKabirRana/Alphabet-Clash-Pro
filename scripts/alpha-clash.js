@@ -8,6 +8,30 @@
 //     playgroundSection.classList.remove("hidden");
 // }
 
+
+function handleKeyboardKeyUpEvent(event){
+    const playerPressed = event.key;
+    console.log("player pressed",playerPressed);
+
+    // get expected the press
+    const currentAlphabetElement = document.getElementById("current-alphabet");
+    const currentAlphabet = currentAlphabetElement.innerText;
+    const expectedAlphabet = currentAlphabet.toLowerCase();
+    console.log(playerPressed, expectedAlphabet);
+
+    // check match or not
+    if(playerPressed === expectedAlphabet){
+        console.log("you got a point");
+    }
+    else{
+        console.log("you missed. you lost a life");
+    }
+}
+
+
+// capture keyboard key press
+document.addEventListener("keyup", handleKeyboardKeyUpEvent);
+
 function continueGame (){
     // step 1: generate a random alphabet
     const alphabet = getARandomAlphabet();
@@ -19,8 +43,7 @@ function continueGame (){
 
     // set background color
     setBackgroundColorById(alphabet);
-
-    
+   
 }
 
 function play(){
