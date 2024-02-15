@@ -19,6 +19,7 @@ function continueGame (){
 
     // set background color
     setBackgroundColorById(alphabet);
+
     
 }
 
