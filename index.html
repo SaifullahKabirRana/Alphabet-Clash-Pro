@@ -78,15 +78,17 @@
                 <!-- keyboard end -->
                 <!-- life score -->
                 <div class="flex justify-between w-7/12">
+                    <!-- display Life -->
                     <button class="btn rounded-full bg-[#894189] text-[#FFFFFF] px-6">
                         Life
                         <img src="images/heart.svg" alt="">
-                        <span>1</span>
+                        <span id="current-life">5</span>
                     </button>
+                    <!-- display Score -->
                     <button class="btn rounded-full bg-[#360490] text-[#FFFFFF] px-6 ">
                         Score
                         <img src="images/dollar.svg" alt="">
-                        <span>1</span>
+                        <span id="current-score">0</span>
                     </button>
                 </div>
             </div>
@@ -94,14 +96,15 @@
         <!-- playground end -->
 
         <!-- final score start -->
-        <section class="score flex justify-center items-center min-h-screen hidden">
+        <section id="final-score" class="flex justify-center items-center min-h-screen hidden">
             <div class="text-white text-center space-y-4 bg-gradient-to-r from-[#ffffff8f] to-[#ffffff33] rounded-2xl p-12">
+                <h4 class="text-2xl poppins-medium">Game Over !</h4>
                 <h2 class="text-[64px] ">
                     <span class="poppins-extrabold">Score</span>
                     <span class="poppins-semibold">:</span>
-                    <span class="poppins-medium">14</span>
+                    <span id="last-score" class="poppins-medium">0</span>
                 </h2>
-                <button class="btn text-black text-2xl poppins-semibold">Play Now</button>
+                <button onclick="play()" class="btn text-black text-2xl poppins-semibold">Play Now</button>
                 <p class="text-xl poppins-medium">Practice will make you Pro</p>
             </div>
 
